@@ -1,0 +1,14 @@
+.active {
+  font-size: 15px;
+  color: rgb(7, 105, 138);
+}
+
+.inactive {
+  font-size: 15px;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.inactive:hover {
+  color: rgb(7, 105, 138);
+}
