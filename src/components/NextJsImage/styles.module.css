@@ -1,0 +1,39 @@
+.imageOverlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageOverlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 255, 0);
+  transition: background-color 0.5s ease;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.description {
+  color: white;
+  z-index: 1;
+  font-size: 30px;
+  font-weight: 600;
+  pointer-events: none;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  transform: translateX(0);
+  transition: 0.5s ease;
+}
+
+.descriptionHide {
+  transform: translateX(100%);
+  right: 0;
+}
+
+.imageOverlay:hover::after {
+  background-color: rgba(7, 105, 138, 0.8);
+}

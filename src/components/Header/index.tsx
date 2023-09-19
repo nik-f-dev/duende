@@ -2,22 +2,9 @@
 
 import Navigation from '../Navigation';
 
-import styles from './styles.module.css';
+import navLinks from '@/data/navLinks';
 
-const navLinks = [
-  {
-    name: 'WORK',
-    href: '/',
-  },
-  {
-    name: 'ABOUT',
-    href: '/about',
-  },
-  {
-    name: 'CONTACT',
-    href: '/contact',
-  },
-];
+import styles from './styles.module.css';
 
 export default function Header() {
   return (
@@ -28,13 +15,6 @@ export default function Header() {
           alt="logo"
           className={styles.logo}
         />
-        {/* <Image
-            src="/images/blue-second-logo.png"
-            quality={75}
-            width={400}
-            height={72}
-            alt="logo"
-          /> */}
         <nav className={styles.nav}>
           <Navigation navLinks={navLinks} />
         </nav>

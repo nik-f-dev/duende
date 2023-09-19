@@ -1,3 +1,8 @@
 .wrapper {
   padding: 10px;
+  height: 100vh;
+}
+
+.childrenWrapper {
+  min-height: calc(100vh - 480px);
 }

@@ -16,17 +16,19 @@ export default function Footer() {
       <div className={styles.border}></div>
       <div className={styles.container}>
         <div className={styles.rightWrapper}>
-          <img
-            src="/images/blue-second-logo.png"
-            alt="footer-logo"
-            className={styles.logo}
-          />
+          <Link href="/">
+            <img
+              src="/images/blue-second-logo.png"
+              alt="footer-logo"
+              className={styles.logo}
+            />
+          </Link>
           <p className={clsx(steppe.className, styles.right)}>
             ALL RIGHTS RESERVED / DUENDE /2023 &copy;
           </p>
         </div>
         <div className={styles.socialWrapper}>
-          <Link href="/about">
+          <Link href="https://www.facebook.com/" target="_blank">
             <img
               src="/images/facebook-logo.svg"
               alt="facebook-logo"
@@ -35,7 +37,7 @@ export default function Footer() {
               height="32px"
             />
           </Link>
-          <Link href="/about">
+          <Link href="https://www.instagram.com/" target="_blank">
             <img
               src="/images/instagram-logo.svg"
               alt="instagram-logo"
@@ -44,7 +46,7 @@ export default function Footer() {
               height="32px"
             />
           </Link>
-          <Link href="/about">
+          <Link href="https://www.linkedin.com/" target="_blank">
             <img
               src="/images/linkedin-logo.svg"
               alt="linkedin-logo"

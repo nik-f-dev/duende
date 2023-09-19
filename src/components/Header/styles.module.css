@@ -1,10 +1,8 @@
 .header {
   width: 100%;
-  min-height: 280px;
 }
 
 .logo {
-  object-fit: cover;
   width: 100%;
   text-align: center;
 }
@@ -17,8 +15,7 @@
 }
 
 .navWrapper {
-  padding-top: 65px;
-  margin-left: 75px;
+  margin: 70px 0 70px 70px;
   display: flex;
   flex-direction: column;
   max-width: 400px;
