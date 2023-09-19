@@ -4,5 +4,5 @@
 }
 
 .childrenWrapper {
-  min-height: calc(100vh - 480px);
+  min-height: calc(100vh - 460px);
 }
