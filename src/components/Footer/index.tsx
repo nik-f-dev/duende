@@ -24,7 +24,7 @@ export default function Footer() {
             />
           </Link>
           <p className={clsx(steppe.className, styles.right)}>
-            ALL RIGHTS RESERVED / DUENDE /2023 &copy;
+            ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE /2023&nbsp;&copy;
           </p>
         </div>
         <div className={styles.socialWrapper}>
