@@ -27,7 +27,7 @@ export default function RootLayout({
       <body>
         <div className={styles.wrapper}>
           <Header />
-          <main>{children}</main>
+          <main className={styles.childrenWrapper}>{children}</main>
           <Footer />
         </div>
       </body>

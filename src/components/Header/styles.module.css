@@ -1,10 +1,10 @@
 .header {
+  display: flex;
+  justify-content: start;
   width: 100%;
-  min-height: 280px;
 }
 
 .logo {
-  object-fit: cover;
   width: 100%;
   text-align: center;
 }
@@ -17,9 +17,33 @@
 }
 
 .navWrapper {
-  padding-top: 65px;
-  margin-left: 75px;
+  margin: 70px 0 70px 70px;
   display: flex;
   flex-direction: column;
   max-width: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+  .navWrapper {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    justify-content: center;
+    margin: 30px 0 20px;
+  }
+  .navWrapper {
+    margin: 30px 10px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    justify-content: center;
+  }
+  .navWrapper {
+    max-width: 300px;
+  }
 }
