@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding-top: 100px;
+  width: 75%;
+}
+
+.headingWrapper {
+  max-width: 32%;
+}
+
+.aboutWrapper {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.heading {
+  font-size: 90px;
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .aboutWrapper {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+  .headingWrapper {
+    max-width: 100%;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .text {
+    font-size: 14px;
+  }
+}

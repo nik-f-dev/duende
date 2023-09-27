@@ -1,0 +1,28 @@
+.container {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.socialWrapper {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 0;
+}
+
+.socialLink {
+  margin: 10px;
+  cursor: pointer;
+  max-height: 60px;
+  width: 50px;
+  height: 50px;
+}

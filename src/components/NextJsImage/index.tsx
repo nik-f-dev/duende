@@ -37,7 +37,6 @@ export default function NextJsImage({
         })}
         fill
         sizes="100%"
-        priority={true}
         src={photo}
         quality={50}
         {...{ alt, onClick }}

@@ -24,35 +24,25 @@ export default function Footer() {
             />
           </Link>
           <p className={clsx(steppe.className, styles.right)}>
-            ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE /2023&nbsp;&copy;
+            ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE / 2023&nbsp;&copy;
           </p>
         </div>
         <div className={styles.socialWrapper}>
-          <Link href="https://www.facebook.com/" target="_blank">
+          <Link
+            href="https://instagram.com/weareduende?igshid=MzRlODBiNWFlZA=="
+            target="_blank"
+          >
             <img
-              src="/images/facebook-logo.svg"
-              alt="facebook-logo"
-              className={styles.socialLink}
-              width="32px"
-              height="32px"
-            />
-          </Link>
-          <Link href="https://www.instagram.com/" target="_blank">
-            <img
-              src="/images/instagram-logo.svg"
+              src="/images/instagram.svg"
               alt="instagram-logo"
               className={styles.socialLink}
-              width="32px"
-              height="32px"
             />
           </Link>
-          <Link href="https://www.linkedin.com/" target="_blank">
+          <Link href="https://www.behance.net/weareduende" target="_blank">
             <img
-              src="/images/linkedin-logo.svg"
+              src="/images/behance-logo.svg"
               alt="linkedin-logo"
               className={styles.socialLink}
-              width="32px"
-              height="32px"
             />
           </Link>
         </div>
