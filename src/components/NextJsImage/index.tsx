@@ -2,11 +2,10 @@ import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
 import { useState } from 'react';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
 import localFont from 'next/font/local';
-import { useInView } from 'react-intersection-observer';
 
 import styles from './styles.module.css';
+import { useInView } from 'react-intersection-observer';
 
 const steppe = localFont({
   src: '../../../public/fonts/Steppe/Steppe.otf',
@@ -14,61 +13,37 @@ const steppe = localFont({
   style: 'normal',
 });
 
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.5 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
 export default function NextJsImage({
   photo,
   imageProps: { alt, onClick },
   wrapperStyle,
 }: RenderPhotoProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   });
 
-  const [onImage, setMouse] = useState(false);
   return (
-    <motion.div
+    <div
       ref={ref}
       style={{ ...wrapperStyle, position: 'relative' }}
-      className={styles.imageOverlay}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
-      onMouseEnter={() => {
-        setMouse(true);
-      }}
-      onMouseLeave={() => {
-        setMouse(false);
-      }}
-      variants={imageVariants}
+      className={clsx(styles.imageOverlay)}
     >
-      {inView ? (
-        <Image
-          fill
-          sizes="75vw"
-          src={photo}
-          quality={70}
-          {...{ alt, onClick }}
-        />
-      ) : null}
-      <p
-        className={
-          onImage
-            ? clsx(styles.description, steppe.className)
-            : clsx(styles.description, styles.descriptionHide)
-        }
-      >
-        {alt}
-      </p>
-    </motion.div>
+      <Image
+        className={clsx(styles.imageOverlay2, {
+          [styles.show]: !isLoading && inView,
+        })}
+        fill
+        sizes="100%"
+        priority={true}
+        src={photo}
+        quality={50}
+        {...{ alt, onClick }}
+        onLoadingComplete={() => setIsLoading(false)}
+      />
+      <p className={clsx(styles.description, steppe.className)}>{alt}</p>
+    </div>
   );
 }
