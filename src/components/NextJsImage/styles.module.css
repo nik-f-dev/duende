@@ -1,6 +1,15 @@
+.imageOverlay2 {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  scale: 0.5;
+}
+
 .imageOverlay {
   position: relative;
   overflow: hidden;
+  /* opacity: 0;
+  scale: 0.5; */
 }
 
 .imageOverlay::after {
@@ -8,7 +17,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  height: 100%;
+  height: 50%;
   width: 100%;
   background-color: rgba(0, 0, 255, 0);
   transition: background-color 0.5s ease;
@@ -24,16 +33,22 @@
   pointer-events: none;
   position: absolute;
   bottom: 30px;
-  right: 20px;
-  transform: translateX(0);
-  transition: 0.5s ease;
-}
-
-.descriptionHide {
+  transition: 0.3s ease;
   transform: translateX(100%);
   right: 0;
 }
 
+.imageOverlay:hover .description {
+  right: 20px;
+  transform: translateX(0);
+}
+
 .imageOverlay:hover::after {
-  background-color: rgba(7, 105, 138, 0.8);
+  background: linear-gradient(0deg, rgba(7,105,138,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.show {
+  opacity: 1;
+  scale: 1;
+  transition: 0.5s;
 }
