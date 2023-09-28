@@ -28,6 +28,7 @@ export default function Contact() {
             src={InstagramIcon}
             alt="instagram-logo"
             className={styles.socialLink}
+            priority
           />
         </Link>
         <Link href="https://www.behance.net/weareduende" target="_blank">
@@ -35,6 +36,7 @@ export default function Contact() {
             src={BehanceLogo}
             alt="linkedin-logo"
             className={styles.socialLink}
+            priority
           />
         </Link>
       </div>

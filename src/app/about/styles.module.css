@@ -15,7 +15,7 @@
 .aboutWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   grid-area: 4 / 2 / 6 / 3;
 }
 

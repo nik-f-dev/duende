@@ -19,6 +19,7 @@ export default function Footer() {
               className={styles.logo}
               width={50}
               height={36}
+              priority
             />
           </Link>
           <p className={styles.right}>
@@ -34,6 +35,7 @@ export default function Footer() {
               src={InstagramIcon}
               alt="instagram-logo"
               className={styles.socialLink}
+              priority
             />
           </Link>
           <Link href="https://www.behance.net/weareduende" target="_blank">
@@ -41,6 +43,7 @@ export default function Footer() {
               src={BehanceLogo}
               alt="linkedin-logo"
               className={styles.socialLink}
+              priority
             />
           </Link>
         </div>

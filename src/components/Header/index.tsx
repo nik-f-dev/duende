@@ -17,6 +17,7 @@ export default function Header() {
           className={styles.logo}
           width={400}
           height={72}
+          priority
         />
         <nav className={styles.nav}>
           <Navigation navLinks={navLinks} />
