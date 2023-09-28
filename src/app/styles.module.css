@@ -1,21 +1,20 @@
 .wrapper {
-  padding: 10px;
   height: 100vh;
 }
 
 .childrenWrapper {
-  min-height: calc(100vh - 460px);
+  min-height: calc(100vh - 440px);
 }
 
 @media screen and (max-width: 600px) {
   .childrenWrapper {
-    min-height: calc(100vh - 340px);
+    min-height: calc(100vh - 320px);
   }
 }
 
 @media screen and (max-width: 500px) {
   .childrenWrapper {
-    min-height: calc(100vh - 320px);
+    min-height: calc(100vh - 300px);
   }
 }
 

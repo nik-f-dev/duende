@@ -12,7 +12,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.navWrapper}>
         <Image
-          src="/images/blue-third-logo.png"
+          src="/images/white-third-logo.png"
           alt="logo"
           className={styles.logo}
           width={400}

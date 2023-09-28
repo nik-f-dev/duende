@@ -22,7 +22,7 @@ export default function Footer() {
         <div className={styles.rightWrapper}>
           <Link href="/">
             <Image
-              src="/images/blue-second-logo.png"
+              src="/images/white-second-logo.png"
               alt="footer-logo"
               className={styles.logo}
               width={50}

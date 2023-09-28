@@ -24,7 +24,7 @@ export default function Gallery() {
           return 4;
         }}
         photos={photos}
-        spacing={4}
+        spacing={0}
         renderPhoto={NextJsImage}
         onClick={({ index: current }) => setIndex(current)}
       />
