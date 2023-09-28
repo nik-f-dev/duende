@@ -2,16 +2,9 @@ import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
 import { useState } from 'react';
 import clsx from 'clsx';
-import localFont from 'next/font/local';
 
 import styles from './styles.module.css';
 import { useInView } from 'react-intersection-observer';
-
-const steppe = localFont({
-  src: '../../../public/fonts/Steppe/Steppe.otf',
-  weight: '400',
-  style: 'normal',
-});
 
 export default function NextJsImage({
   photo,
@@ -42,7 +35,7 @@ export default function NextJsImage({
         {...{ alt, onClick }}
         onLoadingComplete={() => setIsLoading(false)}
       />
-      <p className={clsx(styles.description, steppe.className)}>{alt}</p>
+      <p className={clsx(styles.description)}>{alt}</p>
     </div>
   );
 }
