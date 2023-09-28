@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 import styles from './styles.module.css';
+
+export const metadata: Metadata = {
+  title: 'Contact | Duende',
+};
 
 export default function Contact() {
   return (

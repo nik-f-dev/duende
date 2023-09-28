@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
+
 import styles from './styles.module.css';
+
+export const metadata: Metadata = {
+  title: 'About | Duende',
+};
 
 export default function About() {
   return (

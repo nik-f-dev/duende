@@ -8,7 +8,22 @@ import './globals.css';
 import styles from './styles.module.css';
 
 export const metadata: Metadata = {
-  title: 'commercial',
+  title: 'Duende',
+  description:
+    '3D architectural visualization and animation studio. We provide high-end realistic 3d rendering services for architects, developers, branding agencies and companies.',
+  applicationName: 'Duende',
+  keywords: [
+    'architectural',
+    'visualization',
+    'architectural visualization',
+    'animation studio',
+    '3d rendering',
+    'architects',
+    'branding agencies',
+    'developers',
+    'Crimea',
+  ],
+  creator: 'nik-f-dev',
 };
 
 const arodora = localFont({

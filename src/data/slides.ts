@@ -14,7 +14,7 @@ const photos = [
   { src: '/images/8.jpg', width: 738, height: 922, alt: 'Residential complex' },
   { src: '/images/9.jpg', width: 738, height: 922, alt: 'Shopping Center' },
   { src: '/images/10.jpg', width: 738, height: 922, alt: 'Art Museum' },
-  { src: '/images/11.png', width: 1080, height: 491, alt: 'Art Museum' },
+  { src: '/images/11.jpg', width: 1080, height: 491, alt: 'Art Museum' },
   { src: '/images/12.jpg', width: 615, height: 922, alt: 'Office Center' },
   {
     src: '/images/13.jpg',
