@@ -18,3 +18,7 @@
     min-height: calc(100vh - 320px);
   }
 }
+
+.galleryWrapper {
+  min-height: 110vh;
+}

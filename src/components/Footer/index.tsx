@@ -1,12 +1,12 @@
 import localFont from 'next/font/local';
+import Link from 'next/link';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import styles from './styles.module.css';
-import Link from 'next/link';
-
 import InstagramIcon from '../../assets/instagram.svg';
 import BehanceLogo from '../../assets/behance-logo.svg';
+
+import styles from './styles.module.css';
 
 const steppe = localFont({
   src: '../../../public/fonts/Steppe/Steppe.otf',
