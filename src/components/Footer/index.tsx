@@ -1,18 +1,10 @@
-import localFont from 'next/font/local';
 import Link from 'next/link';
-import clsx from 'clsx';
 import Image from 'next/image';
 
 import InstagramIcon from '../../assets/instagram.svg';
 import BehanceLogo from '../../assets/behance-logo.svg';
 
 import styles from './styles.module.css';
-
-const steppe = localFont({
-  src: '../../../public/fonts/Steppe/Steppe.otf',
-  weight: '400',
-  style: 'normal',
-});
 
 export default function Footer() {
   return (
@@ -29,7 +21,7 @@ export default function Footer() {
               height={36}
             />
           </Link>
-          <p className={clsx(steppe.className, styles.right)}>
+          <p className={styles.right}>
             ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE / 2023&nbsp;&copy;
           </p>
         </div>

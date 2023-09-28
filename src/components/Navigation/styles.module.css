@@ -1,14 +1,16 @@
-.active {
-  font-size: 15px;
-  color: rgb(7, 105, 138);
-}
-
-.inactive {
+.link {
+  font-family: 'Steppe';
   font-size: 15px;
   color: black;
   transition: 0.2s ease-in-out;
 }
 
-.inactive:hover {
+.link:hover {
   color: rgb(7, 105, 138);
 }
+
+.active {
+  font-size: 15px;
+  color: rgb(7, 105, 138);
+}
+
