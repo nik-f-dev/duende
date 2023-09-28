@@ -5,7 +5,8 @@
 }
 
 .logo {
-  width: 100%;
+  width: auto;
+  height: auto;
   text-align: center;
 }
 
@@ -36,6 +37,5 @@
 @media screen and (max-width: 500px) {
   .navWrapper {
     max-width: 300px;
-    max-height: 54px;
   }
 }
