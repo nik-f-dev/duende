@@ -14,6 +14,7 @@
 .border {
   height: 2px;
   background-color: rgb(255, 255, 255);
+  margin: 0 10px 0;
 }
 
 .rightWrapper {

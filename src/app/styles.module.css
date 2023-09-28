@@ -6,15 +6,43 @@
   min-height: calc(100vh - 440px);
 }
 
+.notFound {
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  padding-right: 23px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.headingWrapper {
+  display: inline-block;
+}
+
 @media screen and (max-width: 600px) {
   .childrenWrapper {
     min-height: calc(100vh - 320px);
+  }
+  .notFound {
+    display: flex;
+    flex-direction: column;
+  }
+  .heading {
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .childrenWrapper {
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 302px);
   }
 }
 

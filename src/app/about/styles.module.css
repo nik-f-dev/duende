@@ -1,20 +1,40 @@
 .container {
-  display: flex;
-  justify-content: space-around;
   margin: auto;
-  padding-top: 100px;
-  width: 75%;
+  width: 50%;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 35px;
 }
 
 .headingWrapper {
-  max-width: 32%;
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 .aboutWrapper {
-  max-width: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  grid-area: 4 / 2 / 6 / 3;
+}
+
+.photoWrapper1 {
+  overflow: hidden;
+  display: flex;
   justify-content: center;
+  height: 320px;
+  grid-area: 3 / 1 / 6 / 2;
+  align-self: center;
+}
+
+.photoWrapper2 {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 320px;
+  grid-area: 1 / 2 / 4 / 3;
+  align-self: center;
 }
 
 .text {
@@ -26,6 +46,28 @@
   font-size: 90px;
 }
 
+.photo {
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .headingWrapper {
+    margin: 0 10px 0;
+    text-align: center;
+  }
+
+  .aboutWrapper {
+    max-width: 300px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   .container {
     flex-direction: column;
@@ -33,10 +75,6 @@
   }
   .aboutWrapper {
     margin-top: 20px;
-    max-width: 100%;
-  }
-  .headingWrapper {
-    max-width: 100%;
   }
   .heading {
     font-size: 40px;
