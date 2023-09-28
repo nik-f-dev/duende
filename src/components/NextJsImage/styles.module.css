@@ -8,32 +8,17 @@
 .imageOverlay {
   position: relative;
   overflow: hidden;
-  /* opacity: 0;
-  scale: 0.5; */
-}
-
-.imageOverlay::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 50%;
-  width: 100%;
-  background-color: rgba(0, 0, 255, 0);
-  transition: background-color 0.5s ease;
-  pointer-events: none;
-  overflow: hidden;
 }
 
 .description {
   color: white;
-  z-index: 1;
+  z-index: 2;
   font-size: 30px;
   font-weight: 600;
   pointer-events: none;
   position: absolute;
   bottom: 30px;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   transform: translateX(100%);
   right: 0;
 }
@@ -43,12 +28,76 @@
   transform: translateX(0);
 }
 
+.imageOverlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 100%;
+  pointer-events: none;
+  transition: 0.5s linear;
+  opacity: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(7, 105, 138, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
 .imageOverlay:hover::after {
-  background: linear-gradient(0deg, rgba(7,105,138,0.8) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(7, 105, 138, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 1;
 }
 
 .show {
   opacity: 1;
   scale: 1;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 1500px) {
+  .description {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .description {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .description {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .description {
+    font-size: 18px;
+  }
 }
