@@ -23,6 +23,7 @@ export default function About() {
           height={300}
           alt="our team"
           className={styles.photo}
+          priority
         />
       </div>
       <div className={styles.aboutWrapper}>
@@ -43,6 +44,7 @@ export default function About() {
           height={300}
           alt="our team"
           className={styles.photo}
+          priority
         />
       </div>
     </div>
