@@ -1,8 +1,12 @@
 import localFont from 'next/font/local';
 import clsx from 'clsx';
+import Image from 'next/image';
 
 import styles from './styles.module.css';
 import Link from 'next/link';
+
+import InstagramIcon from '../../assets/instagram.svg';
+import BehanceLogo from '../../assets/behance-logo.svg';
 
 const steppe = localFont({
   src: '../../../public/fonts/Steppe/Steppe.otf',
@@ -17,10 +21,12 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.rightWrapper}>
           <Link href="/">
-            <img
+            <Image
               src="/images/blue-second-logo.png"
               alt="footer-logo"
               className={styles.logo}
+              width={50}
+              height={36}
             />
           </Link>
           <p className={clsx(steppe.className, styles.right)}>
@@ -32,15 +38,15 @@ export default function Footer() {
             href="https://instagram.com/weareduende?igshid=MzRlODBiNWFlZA=="
             target="_blank"
           >
-            <img
-              src="/images/instagram.svg"
+            <Image
+              src={InstagramIcon}
               alt="instagram-logo"
               className={styles.socialLink}
             />
           </Link>
           <Link href="https://www.behance.net/weareduende" target="_blank">
-            <img
-              src="/images/behance-logo.svg"
+            <Image
+              src={BehanceLogo}
               alt="linkedin-logo"
               className={styles.socialLink}
             />

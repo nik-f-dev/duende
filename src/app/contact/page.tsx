@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Image from 'next/image';
+
+import InstagramIcon from '../../assets/instagram.svg';
+import BehanceLogo from '../../assets/behance-logo.svg';
 
 import styles from './styles.module.css';
 
@@ -20,15 +24,15 @@ export default function Contact() {
           href="https://instagram.com/weareduende?igshid=MzRlODBiNWFlZA=="
           target="_blank"
         >
-          <img
-            src="/images/instagram.svg"
+          <Image
+            src={InstagramIcon}
             alt="instagram-logo"
             className={styles.socialLink}
           />
         </Link>
         <Link href="https://www.behance.net/weareduende" target="_blank">
-          <img
-            src="/images/behance-logo.svg"
+          <Image
+            src={BehanceLogo}
             alt="linkedin-logo"
             className={styles.socialLink}
           />
