@@ -31,7 +31,7 @@ export default function NextJsImage({
         fill
         sizes="100%"
         src={photo}
-        quality={33}
+        quality={25}
         {...{ alt, onClick }}
         onLoadingComplete={() => setIsLoading(false)}
       />

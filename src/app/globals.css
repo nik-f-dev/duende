@@ -1,11 +1,13 @@
 @font-face {
-  font-family: "ArodoraProLight";
+  font-family: 'ArodoraProLight';
   src: url('../assets/fonts/ArodoraProLight.otf');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Steppe";
+  font-family: 'Steppe';
   src: url('../assets/fonts/Steppe.otf');
+  font-display: swap;
 }
 
 * {
@@ -19,7 +21,7 @@ body {
   color: white;
   background-color: rgb(0, 0, 0);
   max-width: 100vw;
-  font-family: "ArodoraProLight", Calibri, Tahoma, sans-serif;
+  font-family: 'ArodoraProLight', Calibri, Tahoma, sans-serif;
 }
 
 a {
