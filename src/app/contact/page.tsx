@@ -15,8 +15,8 @@ export default function Contact() {
   return (
     <div className={styles.container}>
       <p className={styles.text}>Republic of&nbsp;Crimea</p>
-      <Link href="mailto:info.duendestudio@gmail.com">
-        <p className={styles.text}>info.duendestudio@gmail.com</p>
+      <Link href="mailto:info@weareduende.com">
+        <p className={styles.text}>info@weareduende.com</p>
       </Link>
 
       <div className={styles.socialWrapper}>
