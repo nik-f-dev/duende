@@ -38,6 +38,7 @@ const photos = [
   },
   { src: '/images/18.jpg', width: 1080, height: 607, alt: 'Business Center' },
   { src: '/images/19.jpg', width: 738, height: 922, alt: 'Office' },
+  { src: '/images/20.jpg', width: 738, height: 923, alt: 'Business Center' },
 ];
 
 export default photos;
