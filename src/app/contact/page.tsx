@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <div className={styles.container}>
-      <p className={styles.text}>Republic of&nbsp;Crimea</p>
       <Link href="mailto:info@weareduende.com">
         <p className={styles.text}>info@weareduende.com</p>
       </Link>
