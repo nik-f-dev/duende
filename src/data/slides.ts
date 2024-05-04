@@ -1,4 +1,10 @@
 const photos = [
+  {
+    src: '/images/21.jpg',
+    width: 903,
+    height: 1290,
+    alt: 'Office building in Munich',
+  },
   { src: '/images/1.jpg', width: 1077, height: 607, alt: 'Villa in Bali' },
   { src: '/images/2.jpg', width: 1080, height: 789, alt: 'Hotel' },
   { src: '/images/3.jpg', width: 646, height: 922, alt: 'County Villa' },
@@ -10,6 +16,12 @@ const photos = [
   },
   { src: '/images/5.jpg', width: 1080, height: 675, alt: 'Office Center' },
   { src: '/images/6.jpg', width: 738, height: 922, alt: 'Residential Complex' },
+  {
+    src: '/images/22.jpg',
+    width: 1500,
+    height: 844,
+    alt: 'Office and business space',
+  },
   { src: '/images/7.jpg', width: 821, height: 922, alt: 'Art Project by AI' },
   { src: '/images/8.jpg', width: 738, height: 922, alt: 'Residential complex' },
   { src: '/images/9.jpg', width: 738, height: 922, alt: 'Shopping Center' },
