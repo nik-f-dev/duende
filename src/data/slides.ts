@@ -3,13 +3,7 @@ const photos = [
     src: '/images/24.jpg',
     width: 1280,
     height: 1600,
-    alt: 'Organic ex 2',
-  },
-  {
-    src: '/images/23.jpg',
-    width: 1280,
-    height: 1600,
-    alt: 'Organic ex 1',
+    alt: 'the library',
   },
   {
     src: '/images/21.jpg',
@@ -28,6 +22,12 @@ const photos = [
   },
   { src: '/images/5.jpg', width: 1080, height: 675, alt: 'Office Center' },
   { src: '/images/6.jpg', width: 738, height: 922, alt: 'Residential Complex' },
+  {
+    src: '/images/23.jpg',
+    width: 1280,
+    height: 1600,
+    alt: 'the library',
+  },
   {
     src: '/images/22.jpg',
     width: 1500,
