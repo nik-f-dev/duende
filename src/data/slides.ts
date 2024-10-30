@@ -1,5 +1,17 @@
 const photos = [
   {
+    src: '/images/24.jpg',
+    width: 1280,
+    height: 1600,
+    alt: 'Organic ex 2',
+  },
+  {
+    src: '/images/23.jpg',
+    width: 1280,
+    height: 1600,
+    alt: 'Organic ex 1',
+  },
+  {
     src: '/images/21.jpg',
     width: 903,
     height: 1290,
