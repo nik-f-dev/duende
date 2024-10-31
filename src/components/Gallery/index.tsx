@@ -5,12 +5,15 @@ import { useState } from 'react';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
 
-import photos from '@/data/slides';
 import NextJsImage from '../NextJsImage';
 
 import 'yet-another-react-lightbox/styles.css';
 
-export default function Gallery() {
+type GalleryProps = {
+  photos: { src: string; alt: string; width: number; height: number }[];
+};
+
+export default function Gallery({ photos }: GalleryProps) {
   const [index, setIndex] = useState(-1);
 
   return (

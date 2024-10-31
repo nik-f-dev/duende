@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import type { RenderPhotoProps } from 'react-photo-album';
 import { useState } from 'react';
@@ -33,7 +35,7 @@ export default function NextJsImage({
         src={photo}
         quality={25}
         {...{ alt, onClick }}
-        onLoadingComplete={() => setIsLoading(false)}
+        onLoad={() => setIsLoading(false)}
       />
       <p className={clsx(styles.description)}>{alt}</p>
     </div>

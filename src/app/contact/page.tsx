@@ -1,44 +1,65 @@
-import Link from 'next/link';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Image from 'next/image';
-
-import InstagramIcon from '../../assets/instagram.svg';
-import BehanceLogo from '../../assets/behance-logo.svg';
-
 import styles from './styles.module.css';
+import { fetchGoogleDriveData } from '@/utils/googleDriveApi';
 
 export const metadata: Metadata = {
   title: 'Contact | Duende',
 };
 
-export default function Contact() {
+type DataProps = {
+  email: string;
+  links: {
+    name: string;
+    link: string;
+    img: string;
+  }[];
+};
+
+export default async function Contact() {
+  let data: DataProps | null = null;
+
+  try {
+    data = await fetchGoogleDriveData();
+  } catch (error) {
+    console.error('Ошибка при получении данных:', error);
+  }
+
   return (
     <div className={styles.container}>
-      <Link href="mailto:info@weareduende.co">
-        <p className={styles.text}>info@weareduende.co</p>
-      </Link>
+      {data ? (
+        <>
+          <Link href={`mailto:${data.email}`}>
+            <p className={styles.text}>{data.email}</p>
+          </Link>
 
-      <div className={styles.socialWrapper}>
-        <Link
-          href="https://instagram.com/weareduende?igshid=MzRlODBiNWFlZA=="
-          target="_blank"
-        >
-          <Image
-            src={InstagramIcon}
-            alt="instagram-logo"
-            className={styles.socialLink}
-            priority
-          />
-        </Link>
-        <Link href="https://www.behance.net/weareduende" target="_blank">
-          <Image
-            src={BehanceLogo}
-            alt="linkedin-logo"
-            className={styles.socialLink}
-            priority
-          />
-        </Link>
-      </div>
+          <div className={styles.socialWrapper}>
+            {data.links && data.links.length > 0 ? (
+              data.links.map((link, index) => (
+                <Link
+                  key={`${link.name}-${index}`}
+                  href={link.link}
+                  target="_blank"
+                >
+                  <Image
+                    src={link.img}
+                    alt={link.name}
+                    className={styles.socialLink}
+                    width={50}
+                    height={50}
+                    priority
+                  />
+                </Link>
+              ))
+            ) : (
+              <p>Нет социальных ссылок.</p>
+            )}
+          </div>
+        </>
+      ) : (
+        <p>Данные не найдены.</p>
+      )}
     </div>
   );
 }
