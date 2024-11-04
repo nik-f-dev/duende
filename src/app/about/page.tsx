@@ -15,6 +15,7 @@ type DataProps = {
   about_images: {
     id: string;
     alt: string;
+    src: string;
   }[];
 };
 
