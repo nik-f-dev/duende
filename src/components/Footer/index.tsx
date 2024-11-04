@@ -1,16 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import styles from './styles.module.css';
+
 import InstagramIcon from '../../assets/instagram.svg';
 import BehanceLogo from '../../assets/behance-logo.svg';
-import styles from './styles.module.css';
+
 import { fetchGoogleDriveData } from '@/utils/googleDriveApi';
 
+type FooterDataProps = {
+  instagram: string;
+  behance: string;
+  since: string;
+};
+
 export default async function Footer() {
-  let since: string | null = null;
+  let data: FooterDataProps | null = null;
 
   try {
-    const fetchedData = await fetchGoogleDriveData();
-    since = fetchedData.since;
+    data = await fetchGoogleDriveData();
   } catch (error) {
     console.error('Ошибка при получении данных:', error);
   }
@@ -31,29 +38,35 @@ export default async function Footer() {
             />
           </Link>
           <p className={styles.right}>
-            ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE / {since}&nbsp;&copy;
+            ALL&nbsp;RIGHTS RESERVED&nbsp;/ DUENDE / {data?.since || '2024'}
+            &nbsp;&copy;
           </p>
         </div>
         <div className={styles.socialWrapper}>
-          <Link
-            href="https://instagram.com/weareduende?igshid=MzRlODBiNWFlZA=="
-            target="_blank"
-          >
-            <Image
-              src={InstagramIcon}
-              alt="instagram-logo"
-              className={styles.socialLink}
-              priority
-            />
-          </Link>
-          <Link href="https://www.behance.net/weareduende" target="_blank">
-            <Image
-              src={BehanceLogo}
-              alt="behance-logo"
-              className={styles.socialLink}
-              priority
-            />
-          </Link>
+          {data && (
+            <>
+              <Link href={data.instagram} target="_blank">
+                <Image
+                  src={InstagramIcon}
+                  alt="instagram-logo"
+                  className={styles.socialLink}
+                  width={50}
+                  height={50}
+                  priority
+                />
+              </Link>
+              <Link href={data.behance} target="_blank">
+                <Image
+                  src={BehanceLogo}
+                  alt="behance-logo"
+                  className={styles.socialLink}
+                  width={50}
+                  height={50}
+                  priority
+                />
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </footer>

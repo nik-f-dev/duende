@@ -2,6 +2,10 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
+
+import InstagramIcon from '../../assets/instagram.svg';
+import BehanceLogo from '../../assets/behance-logo.svg';
+
 import { fetchGoogleDriveData } from '@/utils/googleDriveApi';
 
 export const metadata: Metadata = {
@@ -10,11 +14,8 @@ export const metadata: Metadata = {
 
 type DataProps = {
   email: string;
-  links: {
-    name: string;
-    link: string;
-    img: string;
-  }[];
+  instagram: string;
+  behance: string;
 };
 
 export default async function Contact() {
@@ -35,30 +36,31 @@ export default async function Contact() {
           </Link>
 
           <div className={styles.socialWrapper}>
-            {data.links && data.links.length > 0 ? (
-              data.links.map((link, index) => (
-                <Link
-                  key={`${link.name}-${index}`}
-                  href={link.link}
-                  target="_blank"
-                >
-                  <Image
-                    src={link.img}
-                    alt={link.name}
-                    className={styles.socialLink}
-                    width={50}
-                    height={50}
-                    priority
-                  />
-                </Link>
-              ))
-            ) : (
-              <p>Нет социальных ссылок.</p>
-            )}
+            <Link href={data.instagram} target="_blank">
+              <Image
+                src={InstagramIcon}
+                alt="instagram"
+                className={styles.socialLink}
+                width={50}
+                height={50}
+                priority
+              />
+            </Link>
+
+            <Link href={data.behance} target="_blank">
+              <Image
+                src={BehanceLogo}
+                alt="behance"
+                className={styles.socialLink}
+                width={50}
+                height={50}
+                priority
+              />
+            </Link>
           </div>
         </>
       ) : (
-        <p>Данные не найдены.</p>
+        <p>нет данных</p>
       )}
     </div>
   );
