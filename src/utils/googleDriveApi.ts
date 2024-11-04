@@ -4,7 +4,7 @@ const url = `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media&key=$
 
 export const fetchGoogleDriveData = async () => {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`Ошибка HTTP! статус: ${response.status}`);
     }
