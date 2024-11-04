@@ -13,3 +13,5 @@ export default async function GalleryData() {
 
   return <Gallery photos={photos} />;
 }
+
+export const dynamic = 'force-dynamic';

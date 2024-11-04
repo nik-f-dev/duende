@@ -69,3 +69,5 @@ export default async function About() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

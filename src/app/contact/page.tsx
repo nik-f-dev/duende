@@ -65,3 +65,5 @@ export default async function Contact() {
     </div>
   );
 }
+
+export const dynamic = 'force-dynamic';

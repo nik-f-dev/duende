@@ -72,3 +72,5 @@ export default async function Footer() {
     </footer>
   );
 }
+
+export const dynamic = 'force-dynamic';
