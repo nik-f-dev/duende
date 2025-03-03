@@ -1,4 +1,4 @@
-# [Проект: Duende](https://weareduende.com/)
+# [Проект: Duende](https://weareduende.co/)
 
 Проект "Duende" - сайт-визитка для студии 3D архитектурной визуализации.
 
